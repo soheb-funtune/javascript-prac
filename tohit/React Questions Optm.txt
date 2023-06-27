@@ -1,0 +1,77 @@
+What is react?
+
+React. js is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. ... React allows developers to create large web applications that can change data, without reloading the page. The main purpose of React is to be fast, scalable, and simple.
+
+
+
+What is the main benefit of React/Why Should we use react instead of other libraries and frameworks?
+
+I. The major benefit of using React is its ability to reuse components.  Reusable component in React reduces the overall cost of web applications and it saves time for developers
+II. We can write HTML into JavaScript. A major advantage of using JavaScript to render HTML is that it allows React to keep virtual representation of HTML in memory, commonly known as virtual DOM.
+III. React uses a procces known as "tree reconciliation", it first uses virtual DOM to render HTML tree virtually. Whenever state changes, you get a new HTML tree, and React will write only the difference between new tree and previous tree, making the process faster.
+IV. One-way data flow(unidirectional flow) in React make the code in your app more stable. It ensures that changes made in your child components do not effect their parents bcuz the data cannot flow in opposite way
+a. it is less error prone, as you have more control over your data
+b. it is easier to debug, as you know what is coming from where
+
+
+
+What is virtual DOM?
+
+Virtual DOM is light weight copy of Real DOM kept in memory, and synced with the real DOM by libraries such as ReactDOM. This process is called "reconciliation". Each time the state of your applications changes, the virtual DOM will compare the previous state and the current state of your application and will only update the difference between them.
+
+
+
+What is JSX?
+
+JSX stands for JavaScript XML. It is simply a syntax extension of JavaScript. It allows us to directly write HTML in React (within JavaScript code). 
+
+
+
+
+What is Routing in React?
+
+Routing is a proccess in which user is direct to different pages based on their action and request without the application being reloaded. Routing is mainly used for creating single page web applications and to define multiple routes in your application.
+
+
+
+
+What are the React Hooks?
+
+Hooks are the new addition in React. They let you use state and React features without writing a class.
+◾useState - It is the most important and often used hook. it converts your stateless functional component into a stateful component, any data changes in your application is called state, when any data changes, React re-render the UI.
+◾useEffect - It allows you to use all lifecycle phases or hooks in your functional components
+◾useContext - This hook allows to work with React's context API, which allow you to share data within its component tree without passing through props.
+◾useRef - This hook allows use to create a mutable object. It is used when the value keeps changing like in the case of useState hook, but it does not trigger a re-render when the data changes. The common use of this hook is to grab HTML elements from DOM.
+◾useMemo - useMemo returns a value from the computation, which is then stored in a variable.
+◾useReducer - It does very similiar to setState, It's a different way to manage state using Redux Pattern. Instead of updating the state directly, we dispatch actions, that go to a reducer function, and this function figure out, how to compute the next state
+
+
+
+
+Difference between functional and class component?
+
+◾Functional - 
+I. A functional component is plain JavaScript function that accepts props as an arguement and return React Element.
+II. No render method used.
+III. This is also known as stateless component as they simply accept data and display it in some form, they are mainly responsible for rendering the UI
+IV. React lifecycle methods cannot be used
+◾Class -
+I. A class component requires you to extend frm React component and create a render function which returns a React Element.
+II. It must have render method.
+III. Also known as stateful component bcuz they implement logic and state
+IV. lifecycle methods can be used.
+
+What is state and props, difference between them?
+
+◾Props - props is short for properties and they are used to pass data between React components. 
+I. Components receive data from outside
+II. Used to pass data
+III. Data from props is read-only, and cannot be modified by a component that is receiving it from outside.
+IV. Props can only be passed from parent component to child(unidirectional flow)
+◾State- React has a built in object called state, which allows components to create and manage their own data, so unlike props components cannot pass data with state, but they can create and manage it internally.
+I. components create and manage their own state
+II. used for managing the data.
+III. State can be modified by its own component, but it is private(cannot be accessed from outside).
+IV. Modifying state should happen with the setState() method. 
+
+
